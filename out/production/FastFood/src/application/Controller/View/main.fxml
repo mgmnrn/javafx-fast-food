@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+
+<StackPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+           prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #e0e0e0;"
+           xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="application.Controller.MainController">
+    <children>
+        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" StackPane.alignment="CENTER">
+            <children>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <ImageView fitHeight="87.0" fitWidth="129.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@/icons/fastfood.png"/>
+                            </image>
+                        </ImageView>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+                    <children>
+                        <Label fx:id="user" text="Хэрэглэгч">
+                            <graphic>
+                                <ImageView>
+                                    <image>
+                                        <Image url="@/icons/user.png"/>
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Label>
+                        <Label fx:id="settings" text="Тохиргоо">
+                            <graphic>
+                                <ImageView>
+                                    <image>
+                                        <Image url="@/icons/settings.png"/>
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Label>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</StackPane>

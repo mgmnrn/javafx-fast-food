@@ -1,0 +1,29 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="FastFood">
+    <output-path>$PROJECT_DIR$/out/artifacts/FastFood</output-path>
+    <properties id="javafx-properties">
+      <options>
+        <option name="appClass" value="application.Controller.Main" />
+        <option name="description" value="" />
+        <option name="htmlPlaceholderId" value="" />
+        <option name="title" value="FastFood" />
+        <option name="vendor" value="" />
+        <option name="version" value="" />
+      </options>
+    </properties>
+    <root id="root">
+      <element id="archive" name="FastFood.jar">
+        <element id="module-output" name="FastFood" />
+      </element>
+      <element id="directory" name="lib">
+        <element id="library" level="application" name="charm-glisten-4.4.1" />
+        <element id="library" level="application" name="sqlite-jdbc-3.27.2.1" />
+        <element id="library" level="application" name="json" />
+        <element id="library" level="application" name="javafx-swt" />
+        <element id="library" level="application" name="jfoenix-8.0.8" />
+        <element id="library" level="application" name="fontawesomefx-8.9" />
+        <element id="library" level="application" name="MaskedTextField1.0" />
+      </element>
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" cache="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #67daff; -fx-border-color: green; -fx-border-radius: 30; -fx-background-radius: 30;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller.PaymentController">
+   <children>
+      <Label layoutX="227.0" layoutY="70.0" text="Төлбөр төлөх" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="rdBank" layoutX="107.0" layoutY="153.0" mnemonicParsing="false" text="Дансаар шилжүүлэх">
+         <graphic>
+            <ImageView>
+               <image>
+                  <Image url="@/icons/bank.png" />
+               </image>
+            </ImageView>
+         </graphic></RadioButton>
+      <RadioButton fx:id="rdCart" layoutX="376.0" layoutY="153.0" mnemonicParsing="false" text="Картаар">
+         <graphic>
+            <ImageView>
+               <image>
+                  <Image url="@/icons/bank_cart.png" />
+               </image>
+            </ImageView>
+         </graphic></RadioButton>
+      <RadioButton fx:id="rdQpay" layoutX="107.0" layoutY="242.0" mnemonicParsing="false" text="QPay ">
+         <graphic>
+            <ImageView>
+               <image>
+                  <Image url="@/icons/qpay.png" />
+               </image>
+            </ImageView>
+         </graphic></RadioButton>
+      <Button fx:id="btnPay" layoutX="453.0" layoutY="322.0" mnemonicParsing="false" style="-fx-background-color: #81c784;" text="ТӨЛСӨН">
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="25.0">
+               <image>
+                  <Image url="@/icons/ok.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <ImageView fx:id="close" fitHeight="31.0" fitWidth="32.0" layoutX="554.0" layoutY="14.0">
+         <image>
+            <Image url="@/icons/close.png" />
+         </image>
+      </ImageView>
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+</AnchorPane>

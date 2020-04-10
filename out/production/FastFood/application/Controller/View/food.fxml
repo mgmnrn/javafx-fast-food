@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller.FoodController">
+   <children>
+      <ScrollPane fx:id="scrollPn" layoutX="200.0" onDragDone="#scrollPnDragDone" onDragOver="#scrollPnDragOver" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="0.0" />
+      <AnchorPane prefHeight="480.0" prefWidth="200.0" style="-fx-background-color: #67daff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane layoutX="30.0" layoutY="154.0">
+               <children>
+                  <Label fx:id="chicken" text="ТАХИА" textFill="WHITE">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="20.0" />
+                     </font>
+                     <graphic>
+                        <ImageView>
+                           <image>
+                              <Image url="@/icons/chicken.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Label>
+                  <Label fx:id="pizza" layoutY="115.0" text="ПИЦЦА" textFill="WHITE">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="20.0" />
+                     </font>
+                     <graphic>
+                        <ImageView>
+                           <image>
+                              <Image url="@/icons/pizza.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Label>
+                  <Label fx:id="sides" layoutX="1.0" layoutY="176.0" text="НЭМЭЛТ" textFill="WHITE">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="20.0" />
+                     </font>
+                     <graphic>
+                        <ImageView>
+                           <image>
+                              <Image url="@/icons/sides.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Label>
+                  <Label fx:id="drink" layoutX="5.0" layoutY="232.0" text="УНДАА" textFill="WHITE">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="20.0" />
+                     </font>
+                     <graphic>
+                        <ImageView>
+                           <image>
+                              <Image url="@/icons/drink.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Label>
+                  <Label fx:id="burger" layoutX="3.0" layoutY="56.0" text="БУРГЕР" textFill="WHITE">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="20.0" />
+                     </font>
+                     <graphic>
+                        <ImageView>
+                           <image>
+                              <Image url="@/icons/hamburger.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <ImageView fx:id="main" fitHeight="76.0" fitWidth="66.0" layoutX="68.0" layoutY="10.0">
+               <image>
+                  <Image url="@/icons/fastfood.png" />
+               </image></ImageView>
+            <Label layoutX="28.0" layoutY="86.0" text="ТҮРГЭН ХООЛ" textFill="WHITE">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="520.0" prefHeight="480.0" prefWidth="200.0" style="-fx-background-color: #67daff;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="48.0" fitWidth="50.0" layoutX="68.0" layoutY="14.0">
+               <image>
+                  <Image url="@/icons/cart.png" />
+               </image></ImageView>
+            <Label layoutX="49.0" layoutY="62.0" text="САГСНЫ" textFill="WHITE">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="37.0" layoutY="90.0" text="МЭДЭЭЛЭЛ" textFill="WHITE">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="confirm" layoutX="30.0" layoutY="435.0" mnemonicParsing="false" onAction="#confirmAction" prefHeight="45.0" prefWidth="200.0" style="-fx-background-color: #67daff;" text="БАТАЛГААЖУУЛАХ" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <graphic>
+                  <ImageView fitHeight="34.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@/icons/ok.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <ScrollPane fx:id="scrolCart" layoutY="127.0" onDragDropped="#scrolCartDragDropped" onDragExited="#scrolCartDragExited" onDragOver="#scrolCartDragOver" prefHeight="307.0" prefWidth="200.0" style="-fx-background-color: #bbdefb;" AnchorPane.bottomAnchor="45.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="125.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

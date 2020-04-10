@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.10.0.final using JasperReports Library version 6.10.0-unknown  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4_Landscape" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a0d15d74-38c4-4f64-9123-67af4b1ef958">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter "/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<parameter name="startDate" class="java.lang.String"/>
+	<parameter name="endDate" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select COUNT(*) as orders, f.name 
+FROM order_item oi
+INNER JOIN "order" o ON o.billId = oi.order_id
+INNER JOIN food f ON f.code = oi.food_id
+WHERE date >= $P{startDate} AND  date <= $P{endDate} 
+group by food_id]]>
+	</queryString>
+	<field name="orders" class="java.lang.Object">
+		<property name="com.jaspersoft.studio.field.label" value="orders"/>
+	</field>
+	<field name="name" class="java.lang.Object">
+		<property name="com.jaspersoft.studio.field.label" value="name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="food"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="80" y="3" width="670" height="50" uuid="79d05ac4-7b53-4c8d-bb1d-a12b10f6d102"/>
+				<textElement textAlignment="Center">
+					<font size="32"/>
+				</textElement>
+				<text><![CDATA[Хамгийн их борлуулагдсан бүтээгдэхүүн]]></text>
+			</staticText>
+		</band>
+	</title>
+	<summary>
+		<band height="368" splitType="Stretch">
+			<pie3DChart>
+				<chart evaluationTime="Report">
+					<reportElement x="210" y="40" width="416" height="299" uuid="d7f15ba4-2118-454d-9180-1e6aa87c7b00"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<pieDataset maxCount="5">
+					<keyExpression><![CDATA[$F{name}]]></keyExpression>
+					<valueExpression><![CDATA[$F{orders}]]></valueExpression>
+				</pieDataset>
+				<pie3DPlot>
+					<plot/>
+					<itemLabel/>
+				</pie3DPlot>
+			</pie3DChart>
+			<textField>
+				<reportElement x="10" y="10" width="230" height="20" uuid="f063748e-f5f6-4e3a-b881-01384dd7ff95"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{startDate} + " - " + $P{endDate} + " хүртэлх"]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>
